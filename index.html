@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffe56b">
+  <meta name="description" content="Un detalle de flores amarillas para alegrarte el día.">
+  <title>Flores amarillas para ti</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='11' fill='%23815b24'/%3E%3Cg fill='%23ffd92f'%3E%3Cellipse cx='32' cy='10' rx='7' ry='12'/%3E%3Cellipse cx='32' cy='54' rx='7' ry='12'/%3E%3Cellipse cx='10' cy='32' rx='12' ry='7'/%3E%3Cellipse cx='54' cy='32' rx='12' ry='7'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sun-glow" aria-hidden="true"></div>
+  <div class="petals" aria-hidden="true"></div>
+
+  <main class="experience" aria-live="polite">
+    <header class="topbar">
+      <button class="brand" type="button" data-go="0" aria-label="Volver al inicio">
+        <span class="brand-mark" aria-hidden="true">✿</span>
+        <span>Para alegrarte el día</span>
+      </button>
+      <button class="icon-button" id="openQr" type="button" aria-label="Mostrar el código QR">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 14h2v6h-6v-2h4zM14 16h2v2h-2z"/></svg>
+        <span>Ver QR</span>
+      </button>
+    </header>
+
+    <section class="slide is-active cover" data-slide="0" aria-labelledby="cover-title">
+      <div class="cover-copy">
+        <p class="eyebrow">21 de septiembre</p>
+        <h1 id="cover-title">Unas flores amarillas<br><em>para <span data-copy="recipientName">Elizabeth</span></em></h1>
+        <p class="intro">Un pequeño detalle por el 21 de septiembre, preparado con respeto y con la sencilla intención de regalarte un momento agradable.</p>
+        <button class="primary-button" type="button" data-next>Abrir el detalle <span aria-hidden="true">→</span></button>
+      </div>
+      <div class="hero-flower" aria-hidden="true">
+        <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span>
+        <span class="petal p5"></span><span class="petal p6"></span><span class="petal p7"></span><span class="petal p8"></span>
+        <span class="flower-center">☺</span>
+        <span class="stem"></span><span class="leaf leaf-a"></span><span class="leaf leaf-b"></span>
+        <span class="tag">un gesto sencillo,<br>sin esperar nada</span>
+      </div>
+    </section>
+
+    <section class="slide mood" data-slide="1" aria-labelledby="mood-title">
+      <div class="section-heading">
+        <p class="eyebrow">Primero, una pausa</p>
+        <h2 id="mood-title">¿Cuánta luz necesita tu día?</h2>
+        <p id="moodStatus">Mueve el medidor; esta flor quiere acompañarte.</p>
+      </div>
+      <div class="mood-stage">
+        <div class="mini-flower" id="moodFlower" aria-hidden="true">
+          <span class="mini-petals">✺</span><span class="mini-face" id="flowerFace">•‿•</span>
+        </div>
+        <div class="light-meter" id="lightMeter" style="--light: 25">
+          <div class="meter-labels"><span>un poquito</span><span>toda la luz</span></div>
+          <div class="meter-number"><strong id="lightValue">25</strong><span>%</span></div>
+          <input id="lightRange" type="range" min="0" max="100" value="25" aria-label="Cantidad de luz para el día">
+        </div>
+      </div>
+      <div class="slide-actions">
+        <button class="text-button" type="button" data-back>← Atrás</button>
+        <button class="primary-button" type="button" data-next>Seguir floreciendo →</button>
+      </div>
+    </section>
+
+    <section class="slide messages" data-slide="2" aria-labelledby="messages-title">
+      <div class="section-heading">
+        <p class="eyebrow">Escoge una flor</p>
+        <h2 id="messages-title">Cada una guarda algo bonito</h2>
+        <p>Puedes abrir una o quedarte con las tres.</p>
+      </div>
+      <div class="flower-grid" role="group" aria-label="Flores con mensajes">
+        <button class="message-flower" type="button" data-flower>
+          <span class="flower-icon" aria-hidden="true">🌻</span>
+          <span class="flower-label">Para tu sonrisa</span>
+          <span class="flower-reveal">Ojalá hoy encuentres al menos un motivo tranquilo para sonreír.</span>
+        </button>
+        <button class="message-flower featured" type="button" data-flower>
+          <span class="flower-icon" aria-hidden="true">🌻</span>
+          <span class="flower-label">Para tu calma</span>
+          <span class="flower-reveal">Que el día sea llevadero y te deje un momento agradable para ti.</span>
+        </button>
+        <button class="message-flower" type="button" data-flower>
+          <span class="flower-icon" aria-hidden="true">🌻</span>
+          <span class="flower-label">Para tus sueños</span>
+          <span class="flower-reveal">Que te vaya muy bien en todo lo que estés construyendo.</span>
+        </button>
+      </div>
+      <div class="slide-actions">
+        <button class="text-button" type="button" data-back>← Atrás</button>
+        <button class="primary-button" id="flowerContinue" type="button" data-next disabled>Ver tu ramo →</button>
+      </div>
+    </section>
+
+    <section class="slide bouquet" data-slide="3" aria-labelledby="bouquet-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Un ramo que no se marchita</p>
+        <h2 id="bouquet-title">Flores amarillas para ti</h2>
+      </div>
+      <div class="bouquet-scene" aria-label="Ramo ilustrado de flores amarillas">
+        <div class="bouquet-bloom b1">🌻</div><div class="bouquet-bloom b2">🌻</div><div class="bouquet-bloom b3">🌻</div>
+        <div class="bouquet-bloom b4">🌻</div><div class="bouquet-bloom b5">🌻</div><div class="bouquet-bloom b6">🌻</div>
+        <div class="paper-wrap"></div><div class="ribbon">21·09</div>
+      </div>
+      <div class="floating-notes">
+        <p>Por un buen día.</p><p>Por todo lo bueno que venga.</p><p>Sin compromiso, solo un detalle.</p>
+      </div>
+      <div class="slide-actions">
+        <button class="text-button" type="button" data-back>← Atrás</button>
+        <button class="primary-button" type="button" data-next>Leer el mensaje →</button>
+      </div>
+    </section>
+
+    <section class="slide letter" data-slide="4" aria-labelledby="letter-title">
+      <article class="letter-sheet">
+        <p class="eyebrow">Un mensaje sincero</p>
+        <h2 id="letter-title">Para <span data-copy="recipientName">ti</span></h2>
+        <div class="letter-copy" data-copy="letterHtml"></div>
+        <p class="signature">Con respeto,<br><strong data-copy="senderName">alguien que te desea un buen día</strong> ✿</p>
+      </article>
+      <div class="slide-actions">
+        <button class="text-button" type="button" data-back>← Atrás</button>
+        <button class="primary-button" type="button" data-next>Una última cosa →</button>
+      </div>
+    </section>
+
+    <section class="slide finale" data-slide="5" aria-labelledby="finale-title">
+      <div class="final-sunflower" aria-hidden="true">🌻</div>
+      <p class="eyebrow">Eso era todo</p>
+      <h2 id="finale-title">Que tengas un lindo 21 de septiembre, Elizabeth.</h2>
+      <p>No necesitas responder ni agradecerlo. Eso era todo: un detalle sencillo para desearte un buen día.</p>
+      <div class="final-actions">
+        <button class="primary-button" id="shareButton" type="button">Compartir el detalle</button>
+        <button class="text-button" type="button" data-go="0">Volver a verlo ↺</button>
+      </div>
+    </section>
+
+    <nav class="progress" aria-label="Progreso del detalle">
+      <span id="progressText">1 de 6</span>
+      <div class="progress-track"><span id="progressBar"></span></div>
+    </nav>
+  </main>
+
+  <dialog class="qr-dialog" id="qrDialog">
+    <button class="dialog-close" id="closeQr" type="button" aria-label="Cerrar">×</button>
+    <p class="eyebrow">Flores para llevar</p>
+    <h2>Código QR</h2>
+    <img src="assets/qr-flores-amarillas.png" alt="Código QR decorado con flores amarillas">
+    <p class="qr-help">Escanéalo para abrir este detalle desde cualquier teléfono.</p>
+    <div class="dialog-actions">
+      <a class="primary-button" href="assets/qr-flores-amarillas.png" download="qr-flores-amarillas.png">Descargar QR</a>
+      <button class="text-button" id="copyLink" type="button">Copiar enlace</button>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
